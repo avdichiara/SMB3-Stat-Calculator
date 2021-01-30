@@ -9,8 +9,8 @@ import javafx.stage.Stage;
  * View for the calculator
  */
 public class Main extends Application {
-    private final int MIN_WIDTH = 600;
-    private final int MIN_HEIGHT = 400;
+    final int MIN_WIDTH = 600;
+    final int MIN_HEIGHT = 400;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
