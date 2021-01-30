@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="back_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+   <children>
+      <ImageView id="logo" fitHeight="184.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="4.0" AnchorPane.topAnchor="4.0">
+         <image>
+            <Image url="@./images/SMB3SC_logo.png" />
+         </image>
+      </ImageView>
+      <CheckBox fx:id="is_pitcher" layoutX="14.0" layoutY="198.0" mnemonicParsing="false" text="Is Pitcher" />
+      <AnchorPane id="batting_pane" layoutX="171.0" layoutY="14.0" prefHeight="182.0" prefWidth="402.0" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="14.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d8d8d8" height="182.0" stroke="BLACK" strokeType="INSIDE" width="402.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0" />
+            <HBox layoutX="2.0" layoutY="2.0" prefHeight="20.0" prefWidth="330.0" AnchorPane.leftAnchor="6.0" AnchorPane.topAnchor="2.0">
+               <children>
+                  <Label text="Batting">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="BOTTOM_CENTER" prefHeight="26.0" prefWidth="212.0" text="(for AVG and SLG enter stats without decimal)">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <VBox layoutX="14.0" layoutY="22.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="22.0">
+               <children>
+                  <HBox prefHeight="39.0" prefWidth="366.0" spacing="10.0">
+                     <children>
+                        <VBox prefHeight="33.0" prefWidth="45.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="59.0" text="Games">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <TextField id="input_games" fx:id="input_games" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="33.0" prefWidth="45.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="59.0" text="AB">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <TextField id="input_ab" fx:id="input_ab" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="33.0" prefWidth="45.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="59.0" text="Runs">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <TextField id="input_runs" fx:id="input_runs" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="33.0" prefWidth="45.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="59.0" text="Hits">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <TextField id="input_hits" fx:id="input_hits" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="33.0" prefWidth="45.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="59.0" text="2B">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <TextField id="input_2b" fx:id="input_2b" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="33.0" prefWidth="45.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="59.0" text="3B">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <TextField id="input_3b" fx:id="input_3b" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="33.0" prefWidth="45.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="59.0" text="HR">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <TextField id="input_hr" fx:id="input_hr" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="39.0" prefWidth="366.0" spacing="10.0">
+                     <children>
+                        <VBox prefHeight="33.0" prefWidth="45.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="59.0" text="RBI">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <TextField id="input_rbi" fx:id="input_rbi" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="33.0" prefWidth="45.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="59.0" text="SB">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <TextField id="input_sb" fx:id="input_sb" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="33.0" prefWidth="45.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="59.0" text="CS">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <TextField id="input_cs" fx:id="input_cs" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="33.0" prefWidth="45.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="59.0" text="BB">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <TextField id="input_bb" fx:id="input_bb" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="33.0" prefWidth="45.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="59.0" text="SO">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <TextField id="input_so" fx:id="input_so" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="33.0" prefWidth="45.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="59.0" text="GDP">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <TextField id="input_gdp" fx:id="input_gdp" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="33.0" prefWidth="45.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="59.0" text="HBP">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <TextField id="input_hbp" fx:id="input_hbp" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="39.0" prefWidth="366.0" spacing="10.0">
+                     <children>
+                        <VBox prefHeight="33.0" prefWidth="45.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="59.0" text="SH">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <TextField id="input_sh" fx:id="input_sh" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="33.0" prefWidth="45.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="59.0" text="SF">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <TextField id="input_sf" fx:id="input_sf" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="33.0" prefWidth="45.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="59.0" text="IBB">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <TextField id="input_ibb" fx:id="input_ibb" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="39.0" prefWidth="366.0" spacing="8.0">
+                     <children>
+                        <VBox prefHeight="39.0" prefWidth="110.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="111.0" text="Seasons">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <TextField id="input_seasons" fx:id="input_seasons" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <VBox id="spacer" prefHeight="39.0" prefWidth="30.0" />
+                        <VBox prefHeight="39.0" prefWidth="55.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="59.0" text="AVG Left">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <TextField id="input_avg_left" fx:id="input_avg_left" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="39.0" prefWidth="55.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="55.0" text="AVG Right">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <TextField id="input_avg_right" fx:id="input_avg_right" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="39.0" prefWidth="55.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="59.0" text="SLG Left">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <TextField id="input_slg_left" fx:id="input_slg_left" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="39.0" prefWidth="55.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="59.0" text="SLG Right">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <TextField id="input_slg_right" fx:id="input_slg_right" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <VBox layoutX="14.0" layoutY="208.0" spacing="10.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="219.0">
+         <children>
+            <AnchorPane id="pitching_pane" prefHeight="74.0" prefWidth="290.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d8d8d8" height="72.0" stroke="BLACK" strokeType="INSIDE" width="290.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0" />
+                  <HBox layoutX="2.0" layoutY="2.0" prefHeight="20.0" prefWidth="283.0" AnchorPane.leftAnchor="6.0" AnchorPane.topAnchor="2.0">
+                     <children>
+                        <Label text="Pitching">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="TOP_CENTER" layoutX="14.0" layoutY="22.0" prefHeight="39.0" prefWidth="262.0" spacing="10.0">
+                     <children>
+                        <VBox prefHeight="33.0" prefWidth="45.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="59.0" text="IP">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <TextField id="input_p_ip" fx:id="input_p_ip" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="33.0" prefWidth="45.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="59.0" text="HR">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <TextField id="input_p_hr" fx:id="input_p_hr" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="33.0" prefWidth="45.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="59.0" text="BB">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <TextField id="input_p_bb" fx:id="input_p_bb" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="33.0" prefWidth="45.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="59.0" text="SO">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <TextField id="input_p_so" fx:id="input_p_so" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="33.0" prefWidth="45.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="59.0" text="ERA">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <TextField id="input_p_era" fx:id="input_p_era" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane id="fielding_pane" prefHeight="74.0" prefWidth="290.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d8d8d8" height="72.0" stroke="BLACK" strokeType="INSIDE" width="290.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0" />
+                  <HBox layoutX="2.0" layoutY="2.0" prefHeight="20.0" prefWidth="283.0" AnchorPane.leftAnchor="6.0" AnchorPane.topAnchor="2.0">
+                     <children>
+                        <Label text="Fielding">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="TOP_CENTER" layoutX="14.0" layoutY="22.0" prefHeight="39.0" prefWidth="262.0" spacing="10.0">
+                     <children>
+                        <VBox prefHeight="33.0" prefWidth="45.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="59.0" text="PO">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <TextField id="input_po" fx:id="input_po" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="33.0" prefWidth="45.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="59.0" text="Assists">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <TextField id="input_assists" fx:id="input_assists" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="33.0" prefWidth="45.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="59.0" text="Errors">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <TextField id="input_errors" fx:id="input_errors" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="33.0" prefWidth="45.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="59.0" text="Innings">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <TextField id="input_innings" fx:id="input_innings" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+      <AnchorPane id="result_pane" layoutX="334.0" layoutY="219.0" prefHeight="136.0" prefWidth="252.0" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="327.0" AnchorPane.rightAnchor="21.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d8d8d8" height="136.0" stroke="BLACK" strokeType="INSIDE" width="250.0" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0" />
+            <HBox layoutX="14.0" layoutY="4.0" prefHeight="20.0" prefWidth="236.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="4.0">
+               <children>
+                  <Label text="Results">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <VBox layoutX="13.333333015441895" layoutY="25.0" spacing="5.0" AnchorPane.topAnchor="30.0">
+               <children>
+                  <HBox alignment="TOP_CENTER" prefHeight="39.0" prefWidth="222.0" spacing="10.0">
+                     <children>
+                        <VBox prefHeight="33.0" prefWidth="45.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="59.0" text="POW">
+                                 <font>
+                                    <Font name="System Bold Italic" size="11.0" />
+                                 </font>
+                              </Label>
+                              <Label id="output_pow" fx:id="output_pow" alignment="CENTER" prefHeight="17.0" prefWidth="59.0" text="0">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="33.0" prefWidth="45.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="59.0" text="CON">
+                                 <font>
+                                    <Font name="System Bold Italic" size="11.0" />
+                                 </font>
+                              </Label>
+                              <Label id="output_con" fx:id="output_con" alignment="CENTER" prefHeight="17.0" prefWidth="59.0" text="0">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="33.0" prefWidth="45.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="59.0" text="SPD">
+                                 <font>
+                                    <Font name="System Bold Italic" size="11.0" />
+                                 </font>
+                              </Label>
+                              <Label id="output_spd" fx:id="output_spd" alignment="CENTER" prefHeight="17.0" prefWidth="59.0" text="0">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="33.0" prefWidth="45.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="59.0" text="FLD">
+                                 <font>
+                                    <Font name="System Bold Italic" size="11.0" />
+                                 </font>
+                              </Label>
+                              <Label id="output_fld" fx:id="output_fld" alignment="CENTER" prefHeight="17.0" prefWidth="59.0" text="0">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="33.0" prefWidth="45.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="59.0" text="ARM">
+                                 <font>
+                                    <Font name="System Bold Italic" size="11.0" />
+                                 </font>
+                              </Label>
+                              <Label id="output_arm" fx:id="output_arm" alignment="CENTER" prefHeight="17.0" prefWidth="59.0" text="0">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="TOP_CENTER" prefHeight="39.0" prefWidth="222.0" spacing="30.0">
+                     <children>
+                        <VBox prefHeight="33.0" prefWidth="60.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="60.0" text="Trait 1">
+                                 <font>
+                                    <Font name="System Bold Italic" size="11.0" />
+                                 </font>
+                              </Label>
+                              <Label id="output_t1" fx:id="output_t1" alignment="CENTER" prefHeight="17.0" prefWidth="60.0" text="None">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="33.0" prefWidth="60.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="60.0" text="Trait 2">
+                                 <font>
+                                    <Font name="System Bold Italic" size="11.0" />
+                                 </font>
+                              </Label>
+                              <Label id="output_t2" fx:id="output_t2" alignment="CENTER" prefHeight="17.0" prefWidth="60.0" text="None">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <Button id="calculate_button" alignment="CENTER" layoutX="393.0" layoutY="364.0" mnemonicParsing="false" onAction="#calculateEvent" prefHeight="25.0" prefWidth="120.0" text="Calculate" AnchorPane.bottomAnchor="10.666666666666686" AnchorPane.rightAnchor="87.0" />
+      <Label alignment="CENTER_RIGHT" layoutX="94.0" layoutY="179.0" prefHeight="17.0" prefWidth="60.0" text="v0.1.1a">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
