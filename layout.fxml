@@ -12,7 +12,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="back_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+<AnchorPane id="back_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#removeFocus" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
    <children>
       <ImageView id="logo" fitHeight="184.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="4.0" AnchorPane.topAnchor="4.0">
          <image>
@@ -48,7 +48,7 @@
                                     <Font size="11.0" />
                                  </font>
                               </Label>
-                              <TextField id="input_games" fx:id="input_games" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0">
+                              <TextField id="input_games" fx:id="input_games" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0" stylesheets="@stylesheet.css">
                                  <font>
                                     <Font size="10.0" />
                                  </font>
@@ -62,7 +62,7 @@
                                     <Font size="11.0" />
                                  </font>
                               </Label>
-                              <TextField id="input_ab" fx:id="input_ab" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0">
+                              <TextField id="input_ab" fx:id="input_ab" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0" stylesheets="@stylesheet.css">
                                  <font>
                                     <Font size="10.0" />
                                  </font>
@@ -76,7 +76,7 @@
                                     <Font size="11.0" />
                                  </font>
                               </Label>
-                              <TextField id="input_runs" fx:id="input_runs" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0">
+                              <TextField id="input_runs" fx:id="input_runs" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0" stylesheets="@stylesheet.css">
                                  <font>
                                     <Font size="10.0" />
                                  </font>
@@ -90,7 +90,7 @@
                                     <Font size="11.0" />
                                  </font>
                               </Label>
-                              <TextField id="input_hits" fx:id="input_hits" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0">
+                              <TextField id="input_hits" fx:id="input_hits" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0" stylesheets="@stylesheet.css">
                                  <font>
                                     <Font size="10.0" />
                                  </font>
@@ -104,7 +104,7 @@
                                     <Font size="11.0" />
                                  </font>
                               </Label>
-                              <TextField id="input_2b" fx:id="input_2b" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0">
+                              <TextField id="input_2b" fx:id="input_2b" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0" stylesheets="@stylesheet.css">
                                  <font>
                                     <Font size="10.0" />
                                  </font>
@@ -118,7 +118,7 @@
                                     <Font size="11.0" />
                                  </font>
                               </Label>
-                              <TextField id="input_3b" fx:id="input_3b" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0">
+                              <TextField id="input_3b" fx:id="input_3b" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0" stylesheets="@stylesheet.css">
                                  <font>
                                     <Font size="10.0" />
                                  </font>
@@ -132,7 +132,7 @@
                                     <Font size="11.0" />
                                  </font>
                               </Label>
-                              <TextField id="input_hr" fx:id="input_hr" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0">
+                              <TextField id="input_hr" fx:id="input_hr" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0" stylesheets="@stylesheet.css">
                                  <font>
                                     <Font size="10.0" />
                                  </font>
@@ -150,7 +150,7 @@
                                     <Font size="11.0" />
                                  </font>
                               </Label>
-                              <TextField id="input_rbi" fx:id="input_rbi" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0">
+                              <TextField id="input_rbi" fx:id="input_rbi" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0" stylesheets="@stylesheet.css">
                                  <font>
                                     <Font size="10.0" />
                                  </font>
@@ -164,7 +164,7 @@
                                     <Font size="11.0" />
                                  </font>
                               </Label>
-                              <TextField id="input_sb" fx:id="input_sb" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0">
+                              <TextField id="input_sb" fx:id="input_sb" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0" stylesheets="@stylesheet.css">
                                  <font>
                                     <Font size="10.0" />
                                  </font>
@@ -178,7 +178,7 @@
                                     <Font size="11.0" />
                                  </font>
                               </Label>
-                              <TextField id="input_cs" fx:id="input_cs" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0">
+                              <TextField id="input_cs" fx:id="input_cs" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0" stylesheets="@stylesheet.css">
                                  <font>
                                     <Font size="10.0" />
                                  </font>
@@ -192,7 +192,7 @@
                                     <Font size="11.0" />
                                  </font>
                               </Label>
-                              <TextField id="input_bb" fx:id="input_bb" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0">
+                              <TextField id="input_bb" fx:id="input_bb" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0" stylesheets="@stylesheet.css">
                                  <font>
                                     <Font size="10.0" />
                                  </font>
@@ -206,7 +206,7 @@
                                     <Font size="11.0" />
                                  </font>
                               </Label>
-                              <TextField id="input_so" fx:id="input_so" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0">
+                              <TextField id="input_so" fx:id="input_so" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0" stylesheets="@stylesheet.css">
                                  <font>
                                     <Font size="10.0" />
                                  </font>
@@ -220,7 +220,7 @@
                                     <Font size="11.0" />
                                  </font>
                               </Label>
-                              <TextField id="input_gdp" fx:id="input_gdp" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0">
+                              <TextField id="input_gdp" fx:id="input_gdp" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0" stylesheets="@stylesheet.css">
                                  <font>
                                     <Font size="10.0" />
                                  </font>
@@ -234,7 +234,7 @@
                                     <Font size="11.0" />
                                  </font>
                               </Label>
-                              <TextField id="input_hbp" fx:id="input_hbp" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0">
+                              <TextField id="input_hbp" fx:id="input_hbp" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0" stylesheets="@stylesheet.css">
                                  <font>
                                     <Font size="10.0" />
                                  </font>
@@ -252,7 +252,7 @@
                                     <Font size="11.0" />
                                  </font>
                               </Label>
-                              <TextField id="input_sh" fx:id="input_sh" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0">
+                              <TextField id="input_sh" fx:id="input_sh" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0" stylesheets="@stylesheet.css">
                                  <font>
                                     <Font size="10.0" />
                                  </font>
@@ -266,7 +266,7 @@
                                     <Font size="11.0" />
                                  </font>
                               </Label>
-                              <TextField id="input_sf" fx:id="input_sf" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0">
+                              <TextField id="input_sf" fx:id="input_sf" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0" stylesheets="@stylesheet.css">
                                  <font>
                                     <Font size="10.0" />
                                  </font>
@@ -280,7 +280,7 @@
                                     <Font size="11.0" />
                                  </font>
                               </Label>
-                              <TextField id="input_ibb" fx:id="input_ibb" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0">
+                              <TextField id="input_ibb" fx:id="input_ibb" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0" stylesheets="@stylesheet.css">
                                  <font>
                                     <Font size="10.0" />
                                  </font>
@@ -298,7 +298,7 @@
                                     <Font size="11.0" />
                                  </font>
                               </Label>
-                              <TextField id="input_seasons" fx:id="input_seasons" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0">
+                              <TextField id="input_seasons" fx:id="input_seasons" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0" stylesheets="@stylesheet.css">
                                  <font>
                                     <Font size="10.0" />
                                  </font>
@@ -313,7 +313,7 @@
                                     <Font size="11.0" />
                                  </font>
                               </Label>
-                              <TextField id="input_avg_left" fx:id="input_avg_left" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0">
+                              <TextField id="input_avg_left" fx:id="input_avg_left" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0" stylesheets="@stylesheet.css">
                                  <font>
                                     <Font size="10.0" />
                                  </font>
@@ -327,7 +327,7 @@
                                     <Font size="11.0" />
                                  </font>
                               </Label>
-                              <TextField id="input_avg_right" fx:id="input_avg_right" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0">
+                              <TextField id="input_avg_right" fx:id="input_avg_right" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0" stylesheets="@stylesheet.css">
                                  <font>
                                     <Font size="10.0" />
                                  </font>
@@ -341,7 +341,7 @@
                                     <Font size="11.0" />
                                  </font>
                               </Label>
-                              <TextField id="input_slg_left" fx:id="input_slg_left" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0">
+                              <TextField id="input_slg_left" fx:id="input_slg_left" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0" stylesheets="@stylesheet.css">
                                  <font>
                                     <Font size="10.0" />
                                  </font>
@@ -355,7 +355,7 @@
                                     <Font size="11.0" />
                                  </font>
                               </Label>
-                              <TextField id="input_slg_right" fx:id="input_slg_right" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0">
+                              <TextField id="input_slg_right" fx:id="input_slg_right" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0" stylesheets="@stylesheet.css">
                                  <font>
                                     <Font size="10.0" />
                                  </font>
@@ -391,7 +391,7 @@
                                     <Font size="11.0" />
                                  </font>
                               </Label>
-                              <TextField id="input_p_ip" fx:id="input_p_ip" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0">
+                              <TextField id="input_p_ip" fx:id="input_p_ip" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0" stylesheets="@stylesheet.css">
                                  <font>
                                     <Font size="10.0" />
                                  </font>
@@ -405,7 +405,7 @@
                                     <Font size="11.0" />
                                  </font>
                               </Label>
-                              <TextField id="input_p_hr" fx:id="input_p_hr" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0">
+                              <TextField id="input_p_hr" fx:id="input_p_hr" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0" stylesheets="@stylesheet.css">
                                  <font>
                                     <Font size="10.0" />
                                  </font>
@@ -419,7 +419,7 @@
                                     <Font size="11.0" />
                                  </font>
                               </Label>
-                              <TextField id="input_p_bb" fx:id="input_p_bb" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0">
+                              <TextField id="input_p_bb" fx:id="input_p_bb" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0" stylesheets="@stylesheet.css">
                                  <font>
                                     <Font size="10.0" />
                                  </font>
@@ -433,7 +433,7 @@
                                     <Font size="11.0" />
                                  </font>
                               </Label>
-                              <TextField id="input_p_so" fx:id="input_p_so" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0">
+                              <TextField id="input_p_so" fx:id="input_p_so" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0" stylesheets="@stylesheet.css">
                                  <font>
                                     <Font size="10.0" />
                                  </font>
@@ -447,7 +447,7 @@
                                     <Font size="11.0" />
                                  </font>
                               </Label>
-                              <TextField id="input_p_era" fx:id="input_p_era" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0">
+                              <TextField id="input_p_era" fx:id="input_p_era" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0" stylesheets="@stylesheet.css">
                                  <font>
                                     <Font size="10.0" />
                                  </font>
@@ -461,7 +461,7 @@
             <AnchorPane id="fielding_pane" prefHeight="74.0" prefWidth="290.0">
                <children>
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d8d8d8" height="72.0" stroke="BLACK" strokeType="INSIDE" width="290.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0" />
-                  <HBox layoutX="2.0" layoutY="2.0" prefHeight="20.0" prefWidth="283.0" AnchorPane.leftAnchor="6.0" AnchorPane.topAnchor="2.0">
+                  <HBox layoutX="2.0" layoutY="2.0" onMouseClicked="#removeFocus" prefHeight="20.0" prefWidth="283.0" AnchorPane.leftAnchor="6.0" AnchorPane.topAnchor="2.0">
                      <children>
                         <Label text="Fielding">
                            <font>
@@ -479,7 +479,7 @@
                                     <Font size="11.0" />
                                  </font>
                               </Label>
-                              <TextField id="input_po" fx:id="input_po" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0">
+                              <TextField id="input_po" fx:id="input_po" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0" stylesheets="@stylesheet.css">
                                  <font>
                                     <Font size="10.0" />
                                  </font>
@@ -493,7 +493,7 @@
                                     <Font size="11.0" />
                                  </font>
                               </Label>
-                              <TextField id="input_assists" fx:id="input_assists" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0">
+                              <TextField id="input_assists" fx:id="input_assists" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0" stylesheets="@stylesheet.css">
                                  <font>
                                     <Font size="10.0" />
                                  </font>
@@ -507,7 +507,7 @@
                                     <Font size="11.0" />
                                  </font>
                               </Label>
-                              <TextField id="input_errors" fx:id="input_errors" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0">
+                              <TextField id="input_errors" fx:id="input_errors" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0" stylesheets="@stylesheet.css">
                                  <font>
                                     <Font size="10.0" />
                                  </font>
@@ -521,7 +521,7 @@
                                     <Font size="11.0" />
                                  </font>
                               </Label>
-                              <TextField id="input_innings" fx:id="input_innings" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0">
+                              <TextField id="input_innings" fx:id="input_innings" alignment="CENTER" prefHeight="13.0" prefWidth="45.0" promptText="0" stylesheets="@stylesheet.css">
                                  <font>
                                     <Font size="10.0" />
                                  </font>
@@ -659,7 +659,7 @@
          </children>
       </AnchorPane>
       <Button id="calculate_button" alignment="CENTER" layoutX="393.0" layoutY="364.0" mnemonicParsing="false" onAction="#calculateEvent" prefHeight="25.0" prefWidth="120.0" text="Calculate" AnchorPane.bottomAnchor="10.666666666666686" AnchorPane.rightAnchor="87.0" />
-      <Label alignment="CENTER_RIGHT" layoutX="94.0" layoutY="179.0" prefHeight="17.0" prefWidth="60.0" text="v0.1.1a">
+      <Label fx:id="version_id" alignment="CENTER_RIGHT" layoutX="94.0" layoutY="179.0" prefHeight="17.0" prefWidth="60.0" text="v0.0.0x">
          <font>
             <Font size="10.0" />
          </font>

@@ -61,27 +61,20 @@ public class StatCalculator {
 
         playerStatNumbers[POW] = StatCalculator.calcPower(hits, d, t, hr, ab, weights[POW]);
         playerStats[POW] = "" + playerStatNumbers[POW];
-        System.out.println("\nPOW: "+playerStats[POW]); //db
         playerStatNumbers[CON] = StatCalculator.calcContact(ab, k, weights[CON]);
         playerStats[CON] = "" + playerStatNumbers[CON];
-        System.out.println("CON: "+playerStats[CON]); //db
         playerStatNumbers[SPD] = StatCalculator.calcSpeed(hits, d, t, ab, sb, cs, r, weights[SPD]);
         playerStats[SPD] = "" + playerStatNumbers[SPD];
-        System.out.println("SPD: "+playerStats[SPD]); //db
         playerStatNumbers[FLD] = StatCalculator.calcField(po, a, e, weights[FLD]);
         playerStats[FLD] = "" + playerStatNumbers[FLD];
-        System.out.println("FLD: "+playerStats[FLD]); //db
         playerStatNumbers[ARM] = -1;
         playerStats[ARM] = "N/A";
-        System.out.println("ARM: "+playerStats[ARM]); //db
         playerStats[T1] = StatCalculator.calcTrait(null, playerStatNumbers[POW], playerStatNumbers[CON],
                 playerStatNumbers[SPD], playerStatNumbers[FLD], playerStatNumbers[ARM], hits, d, t, hr, ab, k, sb, cs,
                 r, po, a, e, rbi, gp);
-        System.out.println("T1: "+playerStats[T1]); //db
         playerStats[T2] = StatCalculator.calcTrait(playerStats[T1], playerStatNumbers[POW], playerStatNumbers[CON],
                 playerStatNumbers[SPD], playerStatNumbers[FLD], playerStatNumbers[ARM], hits, d, t, hr, ab, k, sb, cs,
                 r, po, a, e, rbi, gp);
-        System.out.println("T2: "+playerStats[T2]); //db
 
         return playerStats;
     } //@todo

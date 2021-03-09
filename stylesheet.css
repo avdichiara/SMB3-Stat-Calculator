@@ -1,0 +1,8 @@
+.valid-input {
+    -fx-background-color: white;
+    -fx-accent: #0093ff;
+}
+.invalid-input {
+    -fx-background-color: cornsilk;
+    -fx-accent: crimson;
+}
