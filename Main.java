@@ -9,8 +9,6 @@ import javafx.stage.Stage;
  * View for the calculator
  */
 public class Main extends Application {
-    final int MIN_WIDTH = 600;
-    final int MIN_HEIGHT = 400;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -18,7 +16,7 @@ public class Main extends Application {
         //root.getStylesheets().add(getClass().getResource("stylesheet.css").toExternalForm());
         // Initialize primaryStage
         primaryStage.setTitle("SMB3 Stat Calculator");
-        primaryStage.setScene(new Scene(root, MIN_WIDTH, MIN_HEIGHT));
+        primaryStage.setScene(new Scene(root));
         primaryStage.setResizable(false);
         primaryStage.getIcons().add(new Image("./images/SMB3SC_logo.png"));
         primaryStage.show();

@@ -3,7 +3,7 @@
  */
 public class StatCalculator {
     protected static final int POW = 0, CON = 1, SPD = 2, FLD = 3,
-            ARM = 4, T1 = 5, T2 = 6;
+            ARM = 4, T1 = 5, T2 = 6, P_ARM = 0, P_T1 = 1, P_T2 = 2;
 
     /**
      * Chooses between regular and pitcher stats
@@ -25,15 +25,13 @@ public class StatCalculator {
      */
     public static String[] calculate(boolean isPitcher, int stats[], double weights[]) {
         // Checks to see if 'Pitcher' is selected
-        if (!isPitcher)
-            return calculateStats(stats[0], stats[1], stats[2], stats[3], stats[4], stats[5],
-                    stats[6], stats[7], stats[8], stats[9], stats[10], stats[11], stats[12], stats[13], weights);
-        else
-            return calculatePitcherStats(weights);
+        return calculateStats(stats[0], stats[1], stats[2], stats[3], stats[4], stats[5],
+                stats[6], stats[7], stats[8], stats[9], stats[10], stats[11], stats[12], stats[13],
+                isPitcher, weights);
     } //@todo
 
     /**
-     * Calculates a player's stats based on the inputs in the view (for a non-pitcher)
+     * Calculates a player's stats based on the inputs in the view
      * @param hits is the player's total number of hits
      * @param d is the player's total number of doubles
      * @param t is the player's total number of triples
@@ -48,14 +46,15 @@ public class StatCalculator {
      * @param e is the player's total number of at errors
      * @param rbi is the player's RBI
      * @param gp is the total amount of games the player has played
+     * @param isPitcher is a boolean value that checks if the player is a pitcher
      * @param weights is an array of stat modifiers. The higher the weight, the better the stats (default = 1)
      *                This array is in the following order: [POW, CON, SPD, FLD, ARM]  (length = 5)
      * @return a String[] containing the player's stats in the following
-     *         order: [POW, CON, SPD, FLD, null, T1, T2]  (length = 7)
+     *         order: [POW, CON, SPD, FLD, ARM, T1, T2]  (length = 7)
      */
     public static String[] calculateStats(int hits, int d, int t, int hr, int ab, int k, int sb,
                                           int cs, int r, int po, int a, int e, int rbi, int gp,
-                                          double weights[]) {
+                                          boolean isPitcher, double weights[]) {
         String[] playerStats = new String[7];
         int[] playerStatNumbers = new int[5];
 
@@ -67,37 +66,41 @@ public class StatCalculator {
         playerStats[SPD] = "" + playerStatNumbers[SPD];
         playerStatNumbers[FLD] = StatCalculator.calcField(po, a, e, weights[FLD]);
         playerStats[FLD] = "" + playerStatNumbers[FLD];
-        playerStatNumbers[ARM] = -1;
-        playerStats[ARM] = "N/A";
-        playerStats[T1] = StatCalculator.calcTrait(null, playerStatNumbers[POW], playerStatNumbers[CON],
-                playerStatNumbers[SPD], playerStatNumbers[FLD], playerStatNumbers[ARM], hits, d, t, hr, ab, k, sb, cs,
-                r, po, a, e, rbi, gp);
-        playerStats[T2] = StatCalculator.calcTrait(playerStats[T1], playerStatNumbers[POW], playerStatNumbers[CON],
-                playerStatNumbers[SPD], playerStatNumbers[FLD], playerStatNumbers[ARM], hits, d, t, hr, ab, k, sb, cs,
-                r, po, a, e, rbi, gp);
+        if (isPitcher) {
+            String[] pitcherStats = calculatePitcherStats(weights);
+            playerStats[ARM] = pitcherStats[P_ARM];
+            playerStats[T1] = pitcherStats[P_T1];
+            playerStats[T2] = pitcherStats[P_T2];
+        } else {
+            playerStatNumbers[ARM] = -1;
+            playerStats[ARM] = "N/A";
+            playerStats[T1] = StatCalculator.calcTrait(null, playerStatNumbers[POW], playerStatNumbers[CON],
+                    playerStatNumbers[SPD], playerStatNumbers[FLD], playerStatNumbers[ARM], hits, d, t, hr, ab, k, sb, cs,
+                    r, po, a, e, rbi, gp);
+            playerStats[T2] = StatCalculator.calcTrait(playerStats[T1], playerStatNumbers[POW], playerStatNumbers[CON],
+                    playerStatNumbers[SPD], playerStatNumbers[FLD], playerStatNumbers[ARM], hits, d, t, hr, ab, k, sb, cs,
+                    r, po, a, e, rbi, gp);
+        }
 
         return playerStats;
     } //@todo
 
     /**
-     * Calculates a player's stats based on the inputs in the view (for a pitcher)
+     * Calculates a pitcher's stats based on the inputs in the view
      * @param weights is an array of stat modifiers. The higher the weight, the better the stats (default = 1)
      *                This array is in the following order: [POW, CON, SPD, FLD, ARM]  (length = 5)
-     * @return a String[] containing the player's stats in the following
-     *         order: [POW, CON, SPD, FLD, ARM, T1, T2]  (length = 7)
+     * @return a String[] containing the pitcher's stats in the following
+     *         order: [ARM, T1, T2]  (length = 3)
      */
     public static String[] calculatePitcherStats(double weights[]) {
-        String[] playerStats = new String[7];
+        String[] pitcherStats = new String[3];
 
-        //playerStats[POW] = StatCalculator.calcPower();
-        //playerStats[CON] = StatCalculator.calcContact();
-        //playerStats[SPD] = StatCalculator.calcSpeed();
-        //playerStats[FLD] = StatCalculator.calcField();
-        //playerStats[ARM] = StatCalculator.calcArm();
-        playerStats[T1] = StatCalculator.calcPitcherTrait(null);
-        playerStats[T2] = StatCalculator.calcPitcherTrait(playerStats[T1]);
+        int arm = StatCalculator.calcArm(weights[ARM]);
+        pitcherStats[P_ARM] = "" + arm;
+        pitcherStats[P_T1] = StatCalculator.calcPitcherTrait(null);
+        pitcherStats[P_T2] = StatCalculator.calcPitcherTrait(pitcherStats[P_T1]);
 
-        return playerStats;
+        return pitcherStats;
     } //@todo
 
     /**
