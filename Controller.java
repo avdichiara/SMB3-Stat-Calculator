@@ -1,8 +1,17 @@
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.stage.Stage;
+
+import java.awt.*;
+import java.io.IOException;
+import java.net.URI;
 
 /**
  * MVC for the calculator
@@ -260,6 +269,33 @@ public class Controller {
             output_arm.setText(dispValues[ARM]);
             output_t1.setText(dispValues[T1]);
             output_t2.setText(dispValues[T2]);
+        }
+    }
+
+    public void checkUpdates(ActionEvent event) throws Exception {
+        event.consume();
+        try {
+            Desktop.getDesktop().browse(new URI("https://github.com/avdichiara/SMB3-Stat-Calculator"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    // Adapted from:
+    // https://stackoverflow.com/questions/27160951/javafx-open-another-fxml-in-the-another-window-with-button
+    public void openDict(ActionEvent event) throws Exception {
+        event.consume();
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/layout_dictionary.fxml"));
+            Parent root1 = fxmlLoader.load();
+            Stage dictStage = new Stage();
+            dictStage.setTitle("SMB3 Help");
+            dictStage.setScene(new Scene(root1));
+            dictStage.getIcons().add(new Image("./images/SMB3SC_logo.png"));
+            dictStage.show();
+            root1.requestFocus();
+        } catch(Exception e) {
+            e.printStackTrace();
         }
     }
 }

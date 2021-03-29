@@ -12,7 +12,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("layout.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("fxml/layout_main.fxml"));
         //root.getStylesheets().add(getClass().getResource("stylesheet.css").toExternalForm());
         // Initialize primaryStage
         primaryStage.setTitle("SMB3 Stat Calculator");
