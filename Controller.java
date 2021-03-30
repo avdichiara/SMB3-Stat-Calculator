@@ -20,7 +20,7 @@ public class Controller {
     protected static final int POW = 0, CON = 1, SPD = 2, FLD = 3,
                             ARM = 4, T1 = 5, T2 = 6;
 
-    protected static final String VERSION = "v0.2.1a";
+    protected static final String VERSION = "v0.2.5a";
 
     @FXML
     private Label version_id;
