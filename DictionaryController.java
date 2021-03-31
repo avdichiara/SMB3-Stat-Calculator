@@ -11,6 +11,11 @@ public class DictionaryController {
     private final String TOTAL_NUM = "The total number of ";
 
     @FXML
+    private void removeFocus() {
+        dict_title.getParent().requestFocus();
+    }
+
+    @FXML
     private void getInfo_games(MouseEvent event) {
         event.consume();
         dict_title.setText("Games");
