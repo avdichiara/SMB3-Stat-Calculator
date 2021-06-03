@@ -664,7 +664,7 @@
                   </VBox>
                </children>
             </AnchorPane>
-            <Button id="calculate_button" alignment="CENTER" layoutX="393.0" layoutY="364.0" mnemonicParsing="false" onAction="#calculateEvent" prefHeight="25.0" prefWidth="120.0" text="Calculate" AnchorPane.bottomAnchor="10.666666666666686" AnchorPane.rightAnchor="87.0" />
+            <Button id="calculate_button" fx:id="input_calc" alignment="CENTER" layoutX="393.0" layoutY="364.0" mnemonicParsing="false" onAction="#calculateEvent" prefHeight="25.0" prefWidth="120.0" text="Calculate" AnchorPane.bottomAnchor="10.666666666666686" AnchorPane.rightAnchor="87.0" />
             <Label fx:id="version_id" alignment="CENTER_RIGHT" layoutX="94.0" layoutY="179.0" prefHeight="17.0" prefWidth="60.0" text="v0.0.0x">
                <font>
                   <Font size="10.0" />

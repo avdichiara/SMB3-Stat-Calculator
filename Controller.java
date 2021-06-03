@@ -1,8 +1,10 @@
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Cursor;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -12,6 +14,7 @@ import javafx.stage.Stage;
 import java.awt.*;
 import java.io.IOException;
 import java.net.URI;
+import java.net.URISyntaxException;
 
 /**
  * MVC for the calculator
@@ -20,7 +23,7 @@ public class Controller {
     protected static final int POW = 0, CON = 1, SPD = 2, FLD = 3,
                             ARM = 4, T1 = 5, T2 = 6;
 
-    protected static final String VERSION = "v0.2.5a";
+    protected static final String VERSION = "v0.2.7a";
 
     @FXML
     private Label version_id;
@@ -94,6 +97,9 @@ public class Controller {
     @FXML
     private CheckBox is_pitcher;
 
+    @FXML
+    private Button input_calc;
+
     /*
         BEGIN OUTPUT
      */
@@ -117,6 +123,19 @@ public class Controller {
      */
     public void initialize() {
         version_id.setText(VERSION);
+
+        input_calc.setOnMouseEntered(event1 -> {
+            input_calc.setCursor(javafx.scene.Cursor.HAND);
+        });
+        input_calc.setOnMouseExited(event1 -> {
+            input_calc.setCursor(Cursor.DEFAULT);
+        });
+        is_pitcher.setOnMouseEntered(event1 -> {
+            is_pitcher.setCursor(javafx.scene.Cursor.HAND);
+        });
+        is_pitcher.setOnMouseExited(event1 -> {
+            is_pitcher.setCursor(Cursor.DEFAULT);
+        });
     }
 
     @FXML
@@ -276,7 +295,7 @@ public class Controller {
         event.consume();
         try {
             Desktop.getDesktop().browse(new URI("https://github.com/avdichiara/SMB3-Stat-Calculator"));
-        } catch (IOException e) {
+        } catch (IOException | URISyntaxException e) {
             e.printStackTrace();
         }
     }
